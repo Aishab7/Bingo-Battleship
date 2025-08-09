@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>משחק בינגו</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bingo-game">
+
+  <a href="javascript:history.back()" class="back-button">🔙 חזרה</a>
+
+  <h1>🎱 משחק בינגו</h1>
+
+  <div id="controls">
+    <button id="draw-btn" onclick="drawNumber()">🎲 הגר מספר</button>
+    <div id="drawn-number">מספר שהוגרל: -</div>
+    <div id="timer">⏱️ זמן: 0 שניות</div>
+  </div>
+  <div id="test"></div>
+  <div id="bingo-board"></div>
+
+  <div id="message"></div>
+
+  <div id="play-again" style="display:none; margin-top: 20px;">
+    <button onclick="location.reload()">🔁 שחק שוב</button>
+  </div>
+
+  
+  <script src="js/bingo.js"></script>
+</body>
+</html>

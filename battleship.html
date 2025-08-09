@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>משחק צוללות</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="battleship-game">
+  <a href="javascript:history.back()" class="back-button">🔙 חזרה</a>
+
+  <h1>🚢 משחק הצוללות </h1>
+
+  <div class="settings">
+    <label>בחר גודל לוח:</label>
+    <select id="board-size">
+      <option value="10">10x10</option>
+      <option value="12">12x12</option>
+      <option value="15">15x15</option>
+    </select>
+
+    <label>ספינות באורך 2: <input type="number" id="ship2" min="0" max="10" value="2"></label>
+    <label>ספינות באורך 3: <input type="number" id="ship3" min="0" max="10" value="2"></label>
+    <label>ספינות באורך 4: <input type="number" id="ship4" min="0" max="10" value="1"></label>
+    <label>ספינות באורך 5: <input type="number" id="ship5" min="0" max="10" value="1"></label>
+
+    <button id="start-btn">התחל משחק</button>
+  </div>
+
+  <div class="board-container" style="display:none;">
+    <div class="game-info">
+      <div id="timer">⏱️ זמן: 0 שניות</div>
+      <div>ספינות שנותרו: <span id="remaining-ships">0</span></div>
+    </div>
+
+    <h2>לוח המשחק</h2>
+    <div id="game-board"></div>
+  </div>
+
+  <audio id="boom-sound" src="assets/sounds/boom.mp3"></audio>
+  <audio id="missile-sound" src="assets/sounds/missile.mp3"></audio>
+  <audio id="splash-sound" src="assets/sounds/splash.mp3"></audio>
+
+  <div id="win-message" style="display:none; margin-top:30px;">
+    <h2>🎉 ניצחת! כל הספינות הוטבעו!</h2>
+    <button onclick="location.reload()">🔄 שחק שוב</button>
+  </div>
+
+  <script src="js/battleship.js"></script>
+</body>
+</html>
